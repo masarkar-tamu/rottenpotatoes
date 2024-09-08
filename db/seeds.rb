@@ -11,11 +11,11 @@ more_movies = [
   {:title => 'CODA', :rating => 'PG-13',
     :release_date => '13-Aug-2021'},
   {:title => 'Rogue One: A Star Wars Story', :rating => 'PG-13', 
-    :release_date => '2016-12-10' },
-  {:title => 'Raging Bull' :rating => 'R', 
-    :release_date => '1980-11-14' },
+    :release_date => '10-Dec-2016'},
+  {:title => 'Raging Bull', :rating => 'R', 
+    :release_date => '14-Nov-1980'},
   {:title => 'A Star Is Born', :rating => 'R', 
-    :release_date => '2018-08-31' }
+    :release_date => '31-Aug-2018'}
 ]
 
 more_movies.each do |movie|

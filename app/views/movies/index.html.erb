@@ -20,9 +20,11 @@
           <td><%= movie.title %></td>
           <td><%= movie.rating %></td>
           <td><%= movie.release_date.strftime("%d-%b-%Y") %></td>
-          <%= link_to 'Show', movie_path(movie, sort: params[:sort], direction: params[:direction]) %> |
-          <%= link_to 'Edit', edit_movie_path(movie, sort: params[:sort], direction: params[:direction]) %> |
-          <%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure?' }, sort: params[:sort], direction: params[:direction] %>
+          <td>
+            <%= link_to 'Show', movie_path(movie, sort: params[:sort], direction: params[:direction]) %> |
+            <%= link_to 'Edit', edit_movie_path(movie, sort: params[:sort], direction: params[:direction]) %> |
+            <%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure?' }, sort: params[:sort], direction: params[:direction] %>
+          </td>
         </tr>
       <% end %>
     </div>

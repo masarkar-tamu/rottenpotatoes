@@ -28,7 +28,7 @@
 
   <div>
     <%= form.label :release_date, style: "display: block" %>
-    <%= form.text_field :release_date %>
+    <%= form.text_field :release_date, value: @movie.release_date.strftime('%d-%b-%Y') if @movie.release_date.present? %>
   </div>
 
   <!-- Add hidden fields to preserve sort and direction in the form submission -->

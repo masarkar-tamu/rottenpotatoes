@@ -16,7 +16,7 @@
 
   <p>
     <strong>Release date:</strong>
-    <%= movie.release_date %>
+    <%= movie.release_date.strftime('%d-%b-%Y') if movie.release_date.present? %>
   </p>
 
 </div>

@@ -5,8 +5,16 @@ class MoviesController < ApplicationController
   def index
     @sort = params[:sort] || 'title'
     @direction = params[:direction] || 'asc'
-    @movies = Movie.order("#{@sort} #{@direction}")
+    
+    if @sort == 'rating' || @sort == 'release_date'
+      # Sort by rating or release date, then by title as a secondary criterion
+      @movies = Movie.order("#{@sort} #{@direction}, title #{@direction}")
+    else
+      # Default sorting by the selected column
+      @movies = Movie.order("#{@sort} #{@direction}")
+    end
   end
+
 
   # Allow sorting only by title, rating, or release_date
   def sort_column 

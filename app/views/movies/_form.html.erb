@@ -1,41 +1,43 @@
-<%= form_with(model: movie, url: movie.persisted? ? movie_path(movie, sort: params[:sort], direction: params[:direction]) : movies_path(sort: params[:sort], direction: params[:direction])) do |form| %>
-  <% if movie.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+<div class="form-field">
+  <%= form_with(model: movie, url: movie.persisted? ? movie_path(movie, sort: params[:sort], direction: params[:direction]) : movies_path(sort: params[:sort], direction: params[:direction])) do |form| %>
+    <% if movie.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
 
-      <ul>
-        <% movie.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% movie.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :title, style: "display: block" %>
+      <%= form.text_field :title %>
+    </div>
+
+    <div>
+      <%= form.label :rating, style: "display: block" %>
+      <%= form.text_field :rating %>
+    </div>
+
+    <div>
+      <%= form.label :description, style: "display: block" %>
+      <%= form.text_field :description %>
+    </div>
+
+    <div>
+      <%= form.label :release_date, style: "display: block" %>
+      <%= form.text_field :release_date, value: @movie.release_date.strftime('%d-%b-%Y') if @movie.release_date.present? %>
+    </div>
+
+    <!-- Add hidden fields to preserve sort and direction in the form submission -->
+    <%= hidden_field_tag :sort, params[:sort] %>
+    <%= hidden_field_tag :direction, params[:direction] %>
+
+    <div>
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :rating, style: "display: block" %>
-    <%= form.text_field :rating %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div>
-    <%= form.label :release_date, style: "display: block" %>
-    <%= form.text_field :release_date, value: @movie.release_date.strftime('%d-%b-%Y') if @movie.release_date.present? %>
-  </div>
-
-  <!-- Add hidden fields to preserve sort and direction in the form submission -->
-  <%= hidden_field_tag :sort, params[:sort] %>
-  <%= hidden_field_tag :direction, params[:direction] %>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

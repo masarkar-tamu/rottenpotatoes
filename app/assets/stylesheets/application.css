@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ th.sorted-asc {
+    background-color: lightgreen;
+  }
+  
+  th.sorted-desc {
+    background-color: lightblue;
+  }
+  
+  .sort-icon {
+    margin-left: 5px;
+  }
+
+  .form-field {
+    background-color: #ffe4e1; /* off-pink background */
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .form-field input:focus {
+    background-color: yellow; /* yellow when clicked */
+  }
+  

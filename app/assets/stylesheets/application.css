@@ -57,3 +57,21 @@
     font-weight: bold; /* Makes the headers bold */
   }
   
+  .new-movie {
+    text-align: center; /* Center the text */
+    padding: 15px; /* Adds padding around the text */
+    font-size: 18px; /* Increases font size */
+    font-weight: bold; /* Makes the text bold */
+    border: 2px solid #000; /* Adds a black border around the cell */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+    border-radius: 10px; /* Rounded corners for the background */
+  }
+  
+  /* Optionally, you can add styles for the link inside the cell */
+  .new-movie a {
+    text-decoration: none; /* Removes underline from the link */
+  }
+  
+  .new-movie a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+  }

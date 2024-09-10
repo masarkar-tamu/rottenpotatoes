@@ -57,7 +57,7 @@
     font-weight: bold; /* Makes the headers bold */
   }
   
-  .new-movie {
+  .new-movie::before {
     text-align: center; /* Center the text */
     padding: 15px; /* Adds padding around the text */
     font-size: 18px; /* Increases font size */

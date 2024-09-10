@@ -46,7 +46,7 @@
   /* Add borders to the table and its elements */
   .movie-table th, 
   .movie-table td {
-    border: 1px solid black; /* Black borders for both table headers and cells */
+    border: 2px solid black; /* Black borders for both table headers and cells */
     padding: 8px; /* Adds padding inside the cells */
     text-align: left; /* Aligns text to the left */
   }
@@ -59,7 +59,7 @@
   
   .new-movie {
     text-align: center !important; /* Centers the text */
-    padding: 15px; /* Adds padding around the text */
+    padding: 15px !important; /* Adds padding around the text */
     font-size: 18px; /* Increases font size */
     font-weight: bold; /* Makes the text bold */
     border: none !important; /* Remove default table border */
@@ -72,11 +72,10 @@
     background-color: #fff; /* Set background color */
     border: 2px solid #000; /* Adds a black border */
     border-radius: 10px; /* Rounded corners for the button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow */
     text-decoration: none; /* Removes underline from link */
     color: #000; /* Text color */
   }
   
   .new-movie a:hover {
-    text-decoration: underline; /* Adds underline on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow */
   }

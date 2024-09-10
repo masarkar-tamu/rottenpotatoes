@@ -14,7 +14,5 @@ module MoviesHelper
         if params[:sort] == column
           params[:direction] == 'asc' ? 'sorted-asc' : 'sorted-desc'
         end
-      end
     end
-
 end

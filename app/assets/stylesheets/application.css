@@ -58,18 +58,23 @@
   }
   
   .new-movie {
-    text-align: center; /* Center the text */
+    text-align: center !important; /* Centers the text */
     padding: 15px; /* Adds padding around the text */
     font-size: 18px; /* Increases font size */
     font-weight: bold; /* Makes the text bold */
-    margin: 0; /* Ensure no margin to avoid interference */
-    z-index: 1; /* Ensures the cell's border is above the table border */
-    position: relative; /* Relative positioning for z-index */
+    border: none !important; /* Remove default table border */
+    background-color: transparent; /* Ensure background is transparent */
   }
   
-  /* Optionally, you can add styles for the link inside the cell */
   .new-movie a {
-    text-decoration: none; /* Removes underline from the link */
+    display: inline-block; /* Makes the link an inline block for padding control */
+    padding: 15px; /* Adds padding inside the button */
+    background-color: #fff; /* Set background color */
+    border: 2px solid #000; /* Adds a black border */
+    border-radius: 10px; /* Rounded corners for the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow */
+    text-decoration: none; /* Removes underline from link */
+    color: #000; /* Text color */
   }
   
   .new-movie a:hover {

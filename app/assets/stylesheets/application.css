@@ -35,4 +35,25 @@
  .form-field input:focus {
     background-color: yellow; /* yellow when clicked */
   }
+
+  /* Center the table */
+.movie-table {
+    margin: 0 auto; /* Centers the table horizontally */
+    border-collapse: collapse; /* Ensures borders are collapsed together for a cleaner look */
+    width: 80%; /* Adjust width as necessary */
+  }
+  
+  /* Add borders to the table and its elements */
+  .movie-table th, 
+  .movie-table td {
+    border: 1px solid black; /* Black borders for both table headers and cells */
+    padding: 8px; /* Adds padding inside the cells */
+    text-align: left; /* Aligns text to the left */
+  }
+  
+  /* Style the table headers */
+  .movie-table th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+    font-weight: bold; /* Makes the headers bold */
+  }
   

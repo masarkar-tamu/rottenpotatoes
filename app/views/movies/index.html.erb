@@ -26,9 +26,9 @@
     <div id="movies">
       <% @movies.each do |movie| %>
         <tr>
-          <td><%= movie.title %></td>
-          <td><%= movie.rating %></td>
-          <td><%= movie.release_date.strftime("%d-%b-%Y") %></td>
+          <td class="<%= sorted_class('title') %>"><%= movie.title %></td>
+          <td class="<%= sorted_class('rating') %>"><%= movie.rating %></td>
+          <td class="<%= sorted_class('release_date') %>"><%= movie.release_date.strftime("%d-%b-%Y") %></td>
           <td>
             <%= link_to 'Show', movie_path(movie, sort: params[:sort], direction: params[:direction]) %> |
             <%= link_to 'Edit', edit_movie_path(movie, sort: params[:sort], direction: params[:direction]) %> |

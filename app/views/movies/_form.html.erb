@@ -1,4 +1,4 @@
-<div class="form-field">
+<div class="form">
   <%= form_with(model: movie, url: movie.persisted? ? movie_path(movie, sort: params[:sort], direction: params[:direction]) : movies_path(sort: params[:sort], direction: params[:direction])) do |form| %>
     <% if movie.errors.any? %>
       <div style="color: red">
@@ -12,31 +12,31 @@
       </div>
     <% end %>
 
-    <div>
-      <%= form.label :title, style: "display: block" %>
-      <%= form.text_field :title %>
+    <div class="field-container">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-input" %>
     </div>
 
-    <div>
-      <%= form.label :rating, style: "display: block" %>
-      <%= form.text_field :rating %>
+    <div class="field-container">
+      <%= form.label :rating, class: "form-label" %>
+      <%= form.text_field :rating, class: "form-input" %>
     </div>
 
-    <div>
-      <%= form.label :description, style: "display: block" %>
-      <%= form.text_field :description %>
+    <div class="field-container">
+      <%= form.label :description, class: "form-label" %>
+      <%= form.text_field :description, class: "form-input" %>
     </div>
 
-    <div>
-      <%= form.label :release_date, style: "display: block" %>
-      <%= form.text_field :release_date, value: @movie.release_date.strftime('%d-%b-%Y') if @movie.release_date.present? %>
+    <div class="field-container">
+      <%= form.label :release_date, class: "form-label" %>
+      <%= form.text_field :release_date, value: @movie.release_date.strftime('%d-%b-%Y') if @movie.release_date.present?, class: "form-input" %>
     </div>
 
     <!-- Add hidden fields to preserve sort and direction in the form submission -->
     <%= hidden_field_tag :sort, params[:sort] %>
     <%= hidden_field_tag :direction, params[:direction] %>
 
-    <div>
+    <div class="form-submit">
       <%= form.submit %>
     </div>
   <% end %>

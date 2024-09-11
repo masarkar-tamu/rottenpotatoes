@@ -26,16 +26,39 @@
     margin-left: 5px;
   }
 
- .form-field {
+ .form {
     background-color: #ffe4e1; /* off-pink background */
     padding: 10px;
     margin-bottom: 10px;
   }
   
- .form-field input:focus {
+  .form input:focus {
     background-color: yellow; /* yellow when clicked */
   }
 
+  .field-container {
+    display: flex;
+    align-items: center; /* Vertically center align the label and input */
+    margin-bottom: 15px; /* Add spacing between form fields */
+  }
+  
+  .form-label {
+    width: 150px; /* Set a fixed width for the label to align them */
+    margin-right: 10px; /* Add space between the label and the input */
+    font-weight: bold;
+  }
+  
+  .form-input {
+    flex: 1; /* Input takes up the remaining space */
+    padding: 5px; /* Add padding for the input */
+    border: 1px solid #ccc; /* Optional: Add border to the input */
+    border-radius: 4px; /* Optional: Add rounded corners to the input */
+  }
+  
+  .form-submit {
+    text-align: center; /* Center-align the submit button */
+    margin-top: 20px;
+  }
   /* Center the table */
 .movie-table {
     margin: 0 auto; /* Centers the table horizontally */

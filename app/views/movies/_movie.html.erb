@@ -1,22 +1,16 @@
 <div id="<%= dom_id movie %>">
   <p>
-    <strong>Title:</strong>
-    <%= movie.title %>
+    <h1><%= movie.title %>(Rated: <%= movie.rating %>)</h1>
   </p>
 
   <p>
-    <strong>Rating:</strong>
-    <%= movie.rating %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= movie.description %>
-  </p>
-
-  <p>
-    <strong>Release date:</strong>
+    <strong>Release Date:</strong>
     <%= movie.release_date.strftime('%d-%b-%Y') if movie.release_date.present? %>
+  </p>
+
+  <p>
+    <strong>Synopsis:</strong>
+    <strong><%= movie.description %></strong>
   </p>
 
 </div>

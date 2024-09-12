@@ -1,106 +1,118 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+ /*CSS file for styling the different pages of the Movie app*/
 
- .sorted-asc {
-    background-color: lightgreen;
+  /*1. CSS classes for indicating the column by which the index view is sorted, and the direction of the sort*/
+  /*Start*/
+  .sorted-asc {
+    background-color: lightgreen; /*Column color when sorted in ascending order*/
   }
   
- .sorted-desc {
-    background-color: lightblue;
+  .sorted-desc {
+    background-color: lightblue; /*Column color when sorted in descending order*/
   }
   
- .sort-icon {
-    margin-left: 5px;
+  .sort-icon {
+    margin-left: 5px; /*Place the arrow indicating the sort direction 5px right of the column name*/
   }
+  /*End*/
 
- .form {
-    background-color: #ffe4e1; /* off-pink background */
+  /*2. CSS classes for styling the entry form that appears in create and update modes*/
+  /*Start*/
+  
+  /*CSS specification for the overall form*/
+  .form {
+    background-color: #ffe4e1;
     padding: 15px;
     margin: 0px auto;
     width: 80%;
     border-radius: 10px;
   }
   
+  /*Changing the color of an input box in the form to yellow when clicked or in focus*/
   .form input:focus {
-    background-color: yellow; /* yellow when clicked */
+    background-color: yellow; 
   }
 
+  /*CSS specification for the container encapsulating each field-input pair in the form */
   .field-container {
     display: flex;
-    align-items: center; /* Vertically center align the label and input */
-    margin-bottom: 15px; /* Add spacing between form fields */
+    align-items: center; 
+    margin-bottom: 15px; /* Add spacing between consecutive fields of the form*/
   }
   
+  /*CSS specification for each field label in the form*/
   .form-label {
-    width: 150px; /* Set a fixed width for the label to align them */
-    margin-right: 10px; /* Add space between the label and the input */
+    width: 150px; /*Set a fixed width for the field labels to ensure uniform alignment of the consecutive input boxes in the form*/
+    margin-right: 10px; /*Add space between the label and the input box*/
     font-weight: bold;
   }
   
+  /*CSS specification for each field input in the form*/
   .form-input {
-    flex: 1; /* Input takes up the remaining space */
-    padding: 5px; /* Add padding for the input */
-    border: 1px solid #ccc; /* Optional: Add border to the input */
-    border-radius: 4px; /* Optional: Add rounded corners to the input */
+    flex: 1; /*Next to field width, input box takes up the remaining horizontal space of the form width*/
+    padding: 5px;
+    border: 1px solid #ccc; /* Add border to the input box*/
+    border-radius: 4px; /* Add rounded corners to the input box*/
   }
   
+  /*CSS specification for the form submit button*/
   .form-submit {
-    text-align: center; /* Center-align the submit button */
+    text-align: center;
     margin-top: 20px;
   }
-  /* Center the table */
-.movie-table {
-    margin: 0 auto; /* Centers the table horizontally */
-    border-collapse: collapse; /* Ensures borders are collapsed together for a cleaner look */
-    width: 80%; /* Adjust width as necessary */
+  /*End*/
+
+
+  /*3. CSS classes for designing the table structure of the movie table in index view*/
+  /*Start*/
+
+  /*CSS specification for the entire movie table*/
+  .movie-table {
+    margin: 0 auto; 
+    border-collapse: collapse;
+    width: 80%;
   }
   
-  /* Add borders to the table and its elements */
+  /*Add borders to the table and its elements*/
   .movie-table th, 
   .movie-table td {
-    border: 2px solid black; /* Black borders for both table headers and cells */
-    padding: 8px; /* Adds padding inside the cells */
-    text-align: left; /* Aligns text to the left */
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
   }
   
-  /* Style the table headers */
+  /*Style the table headers*/
   .movie-table th {
     background-color: #f2f2f2; /* Light gray background for headers */
     font-weight: bold; /* Makes the headers bold */
   }
-  
-  .new-movie {
-    text-align: center !important; /* Centers the text */
-    padding: 15px !important; /* Adds padding around the text */
-    font-size: 18px; /* Increases font size */
-    font-weight: bold; /* Makes the text bold */
-    border: none !important; /* Remove default table border */
-    background-color: transparent; /* Ensure background is transparent */
+  /*End*/
+
+  /*4. CSS classes for designing the footer of the movie table in the index view*/  
+  /*Start*/
+
+  /*CSS specification for the footer section*/
+  .footer {
+    text-align: center !important;
+    padding: 15px !important;
+    font-size: 18px;
+    font-weight: bold;
+    border: none !important; /* Remove overall table border from the footer row*/
+    background-color: transparent;
   }
   
-  .new-movie a {
-    display: inline-block; /* Makes the link an inline block for padding control */
-    padding: 15px; /* Adds padding inside the button */
-    background-color: #fff; /* Set background color */
-    border: 2px solid #000; /* Adds a black border */
-    border-radius: 10px; /* Rounded corners for the button */
+  /*CSS specification for the link-text in the footer section*/
+  .footer a {
+    display: inline-block;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
     text-decoration: none; /* Removes underline from link */
-    color: #000; /* Text color */
+    color: #000;
   }
   
-  .new-movie a:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow */
+  /*Displays a shadow, when cursor hovers above footer*/
+  .footer a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
   }
+  /*End*/
